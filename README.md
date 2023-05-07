@@ -39,6 +39,7 @@ if (area) {
             btn.click();
         }, 100)
     }, 500); //after every 500ms
+
 } else {
     alert("Select a chat")
 }
@@ -51,13 +52,13 @@ if (area) {
 You can customize the script by changing the message and the time interval between messages.
 
 ### Changing the Message
-To change the message, change the value of `Message` in [line 1](#28) to any other value.
+To change the message, change the value of `Message` in [line 1](#1) to any other value.
 ```javascript
 const message = "Your new message"; //change this message
 ```
 
 ### Adjusting the Time Interval
-To change the time interval, change the value of `500` in [line 13](#41) to any other value in milliseconds.
+To change the time interval, change the value of `500` in [line 14](#14) to any other value in milliseconds.
 
 ```javascript
 }, 500); //change the time interval here

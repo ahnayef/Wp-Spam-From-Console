@@ -51,7 +51,7 @@ if (area) {
 You can customize the script by changing the message and the time interval between messages.
 
 ### Changing the Message
-To change the message, change the value of `Message` in [line 1](#L28) to any other value.
+To change the message, change the value of `Message` in [line 1](README.md#28) to any other value.
 ```javascript
 const message = "Your new message"; //change this message
 ```

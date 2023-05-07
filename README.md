@@ -19,7 +19,7 @@
 
 1. Go to [web.whatsapp.com](https://web.whatsapp.com)
 2. Select a chat
-3. Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> to open the browser console.
+3. Press <kbd>Ctrl+Shift+I</kbd> to open the browser console.
 4. Go to the `Console` tab.
 5. Paste the code below and press enter 
 

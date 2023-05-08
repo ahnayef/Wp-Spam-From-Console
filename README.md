@@ -49,7 +49,7 @@ if (area && message && interval) {
     alert("Select a chat")
 }
 ```
-> ⚠️ By default, the script will send the message every 500 milliseconds.
+> ⚠️ interval should be greater than 500ms
 
 
 

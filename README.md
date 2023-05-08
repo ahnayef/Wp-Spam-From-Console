@@ -31,19 +31,17 @@ if (area && message && interval) {
 
     if (interval < 500) {
         alert("Interval should be greater than 500ms")
-        return;
+    }else{
+      setInterval(() => {
+          area.focus();
+          document.execCommand('insertText', false, message)
+          dispatchEvent(new Event('change', { bubbles: true }))
+          setTimeout(() => {
+              let btn = document.querySelector('#main [data-testid="send"]');
+              btn.click();
+          }, 100)
+      }, interval)
     }
-
-    setInterval(() => {
-        area.focus();
-        document.execCommand('insertText', false, message)
-        dispatchEvent(new Event('change', { bubbles: true }))
-        setTimeout(() => {
-            let btn = document.querySelector('#main [data-testid="send"]');
-            btn.click();
-        }, 100)
-    }, interval)
-
 
 } else {
     alert("Select a chat")

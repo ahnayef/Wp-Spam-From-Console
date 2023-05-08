@@ -23,11 +23,17 @@
 
 
 
-const message = "Message"; //message
+const message = prompt("Enter your message:") //message
+const interval = prompt("Enter interval in millisecond (min 500ms):") //interval
 
 const area = document.querySelector('#main div[contenteditable="true"]');
 
-if (area) {
+if (area && message && interval) {
+
+    if (interval < 500) {
+        alert("Interval should be greater than 500ms")
+        return;
+    }
 
     setInterval(() => {
         area.focus();
@@ -37,7 +43,7 @@ if (area) {
             let btn = document.querySelector('#main [data-testid="send"]');
             btn.click();
         }, 100)
-    }, 500); //after every 500ms
+    }, interval)
 
 
 } else {

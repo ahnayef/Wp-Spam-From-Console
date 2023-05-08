@@ -3,9 +3,6 @@
 ### Table of Contents
  - [Overview](#overview)
  - [Usage](#usage)
- - [Customization](#customization)
-   - [Changing the Message](#changing-the-message)
-   - [Adjusting the Time Interval](#adjusting-the-time-interval)
  - [Stopping the Script](#stopping-the-script)
  - [Notes](#notes)
     
@@ -25,11 +22,18 @@
 
 
 ```javascript
-const message = "Message"; //your message
+const message = prompt("Enter your message:") //message
+const interval = prompt("Enter interval in millisecond (min 500ms):") //interval
 
 const area = document.querySelector('#main div[contenteditable="true"]');
 
-if (area) {
+if (area && message && interval) {
+
+    if (interval < 500) {
+        alert("Interval should be greater than 500ms")
+        return;
+    }
+
     setInterval(() => {
         area.focus();
         document.execCommand('insertText', false, message)
@@ -38,7 +42,8 @@ if (area) {
             let btn = document.querySelector('#main [data-testid="send"]');
             btn.click();
         }, 100)
-    }, 500); //after every 500ms
+    }, interval)
+
 
 } else {
     alert("Select a chat")
@@ -48,21 +53,6 @@ if (area) {
 
 
 
-## Customization
-You can customize the script by changing the message and the time interval between messages.
-
-### Changing the Message
-To change the message, change the value of `Message` in [line 1](#1) to any other value.
-```javascript
-const message = "Your new message"; //change this message
-```
-
-### Adjusting the Time Interval
-To change the time interval, change the value of `500` in [line 14](#14) to any other value in milliseconds.
-
-```javascript
-}, 500); //change the time interval here
-```
 
 ## Stopping the Script
 To stop the script, refresh the page or close the tab. 🙄

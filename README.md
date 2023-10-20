@@ -18,7 +18,7 @@
 2. Select a chat
 3. Press <kbd>Ctrl+Shift+I</kbd> to open the browser console.
 4. Go to the `Console` tab.
-5. Paste the code below and press enter 
+5. Paste the code below and press <kbd>Enter</kbd> 
 
 
 ```javascript
